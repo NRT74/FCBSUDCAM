@@ -1,0 +1,85 @@
+﻿@model IEnumerable<FirstProjetNRT.Models.Personnel>
+
+@{
+    ViewData["Title"] = "RechercheData";
+    Layout = "~/Views/Shared/_MyNewLayout.cshtml";
+}
+
+<h1>RechercheData</h1>
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Personnel" asp-action="Index" method="get">
+    <p>
+        Title: <input type="text" />
+        <input type="submit" value="Filter" />
+    </p>
+
+</form>
+<table class="custom-table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NumId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Matricule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sexe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Poste)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Departement)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model == null)
+        {
+            <span>no items found</span>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matricule)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prenom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexe)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Poste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departement)
+        </td>
+    </tr>
+            }
+        }
+
+            </tbody>
+        </table>

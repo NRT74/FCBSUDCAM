@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        ViewBag.Title = "Connexion BCP SudCam";
+      }
+    <title>
+    @ViewData["Title"] - Se Connecter </title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
