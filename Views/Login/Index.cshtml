@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Login Page";
+    Layout = "~/Views/Shared/_MyNewLayout.cshtml";
+    //Layout = "";
+}
+
+
+@section scripts {
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+
+        function recupNom3()
+            {
+
+                alert(@ViewBag.List);
+           }
+
+    </script>
+}
+
+<body>
+
+    <form method="post" asp-action="Index" asp-controller="Login">
+        
+        <section class="vh-100">
+            <div class="container-fluid h-custom">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                             class="img-fluid" alt="Sample image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example1">Utilisateur</label>
+                            <input type="text" name="SearchName" class="form-control" />
+                            
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="form2Example2">Password</label>
+                            <input type="password" name="SearchPwd" class="form-control" />
+                            
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block mb-4"> Sign in</button>
+                        
+</section>
+
+    </form>
+
+
+
+</body>
+
+
