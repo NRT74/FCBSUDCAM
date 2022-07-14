@@ -1,57 +1,57 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-        @ViewData["Title"] - DemandeBPCSudcam </title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        @ViewData["Title"] BPCSudcam
+    </title>
+     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">DemandeBPCSudcam</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Personnel" asp-action="index">BCP</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Personnel" asp-action="Affichedata">AllPersonel</a>
-                        </li>
+<body class="container">
+    <div class="font-header">GESTION DE BON DE</div>
+    <div class="font-header">PRISE EN CHARGE</div>
+    <div class="font-header1">PERSONNEL/PATIENT</div>
+    <div class="font-header">RESEAU DE SOINS</div>
+    <div class="font-header1">FCB/SUDCAM</div>
 
-                    </ul>
-                </div>
-
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="rectangle">
+        <a class="font-text" asp-area="" asp-controller="Personnel" asp-action="Affichedata">DEMANDE DE BON</a>
+    </div>
+    </br>
+    <div class="rectangle">
+        <a class="font-text" asp-area="" asp-controller="Login" asp-action="index">EMISSION DE BON</a>
+    </div>
+    </br>
+    <div class="rectangle1">
+        <a class="font-text1" asp-area="" asp-controller="Login" asp-action="Index">BONS SOCIAUX</a>
+    </div>
+    </br>
+    <div class="rectangle">
+        <a class="font-text" asp-area="" asp-controller="Login" asp-action="Index">DOSSIERS MEDICAUX</a>
+    </div>
+    </br>
+    <div class="rectangle">
+        <a class="font-text" asp-area="" asp-controller="Login" asp-action="Index">ETATS FINANCIERS</a>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - DemandeBPCSudcam - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-     @RenderSection("Scripts", required: false)
+    @RenderSection("Scripts", required: false)
+
 </body>
+<footer class="footer">
+
+    Copyright  &copy; 2022 - BPCSudcam
+
+</footer>
 </html>

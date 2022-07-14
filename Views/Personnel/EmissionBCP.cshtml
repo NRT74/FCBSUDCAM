@@ -203,7 +203,7 @@
 
     </script>
 }
-<div class="font-header"> Demande de Bon de Prise en Charge Personnel / Patient</div>
+<h3 class="divnew"> Emission de Bon de Prise en Charge Personnel / Patient</h3>
 
 <form asp-controller="Personnel" asp-action="Affichedata" method="post">
    
@@ -211,59 +211,61 @@
             <label> Saisir le Matricule <input class="inputCss" name="searchString" id="NumMat" type="text" > 
             <input type="submit" value="Search"></label>
         </div>
-        <table id="" class="styled-table">
-            <thead>
-                <tr>
-
-                    <th>
-                        @Html.DisplayNameFor(model => model.Matricule)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Nom)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Prenom)
-                    </th>
-
-                </tr>
-            </thead>
-            <tbody>
-
-                @if (Model == null)
-                {
-
-                }
-                else
-                {
-                    @foreach (var item in Model)
-                    {
-
-                        <tr>
-
-                            <td id="NumMat1">
-                                <a href="#" onclick="editstudent(this)">
-                                    @Html.DisplayFor(modelItem => item.Matricule)
-                                </a>
-                            </td>
-                            <td id="NomEmp1">
-                                @Html.DisplayFor(modelItem => item.Nom)
-                            </td>
-                            <td id="PrenomEmp1">
-                                @Html.DisplayFor(modelItem => item.Prenom)
-                            </td>
-
-                        </tr>
-
-                    }
-                }
-
-            </tbody>
-        </table>
- </form>
+  </form>
 
 
-<body>
-    <form method="post" class="form-style-9" asp-action="Affichedata">
+<table id="" class="styled-table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Matricule)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prenom)
+            </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model == null)
+        {
+           
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                
+        <tr>
+
+            <td id="NumMat1">
+                <a href="#" onclick="editstudent(this)">
+                    @Html.DisplayFor(modelItem => item.Matricule)
+                </a>
+            </td>
+            <td id="NomEmp1">
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td id="PrenomEmp1">
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+          
+        </tr>
+                
+            }
+        }
+
+    </tbody>
+</table>
+<form method="post" class="form-style-9" asp-action="Affichedata">
+    <body>
+
+
 
 
         <div class="form-outline mb-4"><label class="label-align-right">Nom Patient :</label><input id="NomEmp" name="nomemploye" type="text" readonly="readonly" class="text-align-left"></div>
@@ -306,7 +308,7 @@
                 </select>
             </label>
         </div>
-        <div>
+        <div class="container">
             <span class="form-control-static"> Receiver: </span>
             <select name="receiver" id="receiver" onchange="FillEmail()">
                 <option value="Selectionner un centre">Selectionner une adresse mail</option>
@@ -322,8 +324,8 @@
             <span class="form-control-static"> Subject: </span> <textarea class="form-control" type="text" id="subject" name="subject"></textarea>
             <span class="form-control-static"> Message: </span> <textarea class="form-control" type="text" id="message" name="message"></textarea>
         </div>
-    </form>
-</body>
 
+    </body>
+</form>
 
 
