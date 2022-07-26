@@ -37,7 +37,7 @@ namespace FirstProjetNRT.Models
                         Sexe = (string)artikel.Element("Sexe"),
                         Poste = (string)artikel.Element("Poste"),
                         Departement = (string)artikel.Element("Departement"),
-                        Classe = (string)artikel.Element("Classe"),
+                        Statut = (string)artikel.Element("Statut"),
                         Nationalite = (string)artikel.Element("Nationalite")
 
             };
@@ -93,7 +93,7 @@ namespace FirstProjetNRT.Models
                         Sexe = (string)artikel.Element("Sexe"),
                         Poste = (string)artikel.Element("Poste"),
                         Departement = (string)artikel.Element("Departement"),
-                        Classe = (string)artikel.Element("Classe"),
+                        Statut = (string)artikel.Element("Statut"),
                         Nationalite = (string)artikel.Element("Nationalite")
 
                     };
@@ -169,7 +169,7 @@ namespace FirstProjetNRT.Models
                         Sexe = (string)artikel.Element("Sexe"),
                         Poste = (string)artikel.Element("Poste"),
                         Departement = (string)artikel.Element("Departement"),
-                        Classe = (string)artikel.Element("Classe"),
+                        Statut = (string)artikel.Element("Statut"),
                         Nationalite = (string)artikel.Element("Nationalite")
 
                     };
@@ -199,7 +199,7 @@ namespace FirstProjetNRT.Models
                         Sexe = (string)artikel.Element("Sexe"),
                         Poste = (string)artikel.Element("Poste"),
                         Departement = (string)artikel.Element("Departement"),
-                        Classe = (string)artikel.Element("Classe"),
+                        Statut = (string)artikel.Element("Statut"),
                         Nationalite = (string)artikel.Element("Nationalite")
 
                     };

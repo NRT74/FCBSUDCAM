@@ -25,8 +25,8 @@ namespace FirstProjetNRT.Models
             public string Poste { get; set; }
             [XmlElement(ElementName = "Departement")]
             public string Departement { get; set; }
-            [XmlElement(ElementName = "Classe")]
-             public string Classe { get; set; }
+            [XmlElement(ElementName = "Statut")]
+             public string Statut { get; set; }
             [XmlElement(ElementName = "Nationalite")]
             public string Nationalite { get; set; }
 

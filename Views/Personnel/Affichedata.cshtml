@@ -32,7 +32,7 @@
                 document.getElementById('NomEmp').value = row.cells[1].innerText;
                 document.getElementById('PrenomEmp').value = row.cells[2].innerText;
                 document.getElementById('NumMat2').value = row.cells[0].innerText;
-
+                document.getElementById('StatutEmp').value = row.cells[3].innerText;
                 // document.getElementById('NomEmp').value = document.getElementById('NomEmp1').innerText;
                 //  document.getElementById('PrenomEmp').value = document.getElementById('PrenomEmp1').innerText;
                 // document.getElementById('NumMat2').value = document.getElementById('NumMat1').innerText;
@@ -40,6 +40,7 @@
                 document.getElementById('NomEmpAD').value = document.getElementById('NomEmp1').innerText;
                 document.getElementById('PrenomEmpAD').value = document.getElementById('PrenomEmp1').innerText;
                 document.getElementById('NumMatAD').value = document.getElementById('NumMat1').innerText;
+                document.getElementById('StatutEmpAD').value = document.getElementById('Statut1').innerText;
                 document.getElementById("chkYes").checked = true;
                 document.getElementById("chkNo").checked = false;
             }
@@ -47,6 +48,7 @@
                 document.getElementById('NomEmp').value = document.getElementById('NomEmp1').innerText;
                 document.getElementById('PrenomEmp').value = document.getElementById('PrenomEmp1').innerText;
                 document.getElementById('NumMat2').value = document.getElementById('NumMat1').innerText;
+                document.getElementById('StatutEmp').value = document.getElementById('Statut1').innerText;
                 document.getElementById("chkNo").checked = true;
                 document.getElementById("chkYes").checked = false;
             }
@@ -224,7 +226,9 @@
                     <th>
                         @Html.DisplayNameFor(model => model.Prenom)
                     </th>
-
+                    <th>
+                        @Html.DisplayNameFor(model => model.Statut)
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -238,21 +242,23 @@
                     @foreach (var item in Model)
                     {
 
-                        <tr>
+                <tr>
 
-                            <td id="NumMat1">
-                                <a href="#" onclick="editstudent(this)">
-                                    @Html.DisplayFor(modelItem => item.Matricule)
-                                </a>
-                            </td>
-                            <td id="NomEmp1">
-                                @Html.DisplayFor(modelItem => item.Nom)
-                            </td>
-                            <td id="PrenomEmp1">
-                                @Html.DisplayFor(modelItem => item.Prenom)
-                            </td>
-
-                        </tr>
+                    <td id="NumMat1">
+                        <a href="#" onclick="editstudent(this)">
+                            @Html.DisplayFor(modelItem => item.Matricule)
+                        </a>
+                    </td>
+                    <td id="NomEmp1">
+                        @Html.DisplayFor(modelItem => item.Nom)
+                    </td>
+                    <td id="PrenomEmp1">
+                        @Html.DisplayFor(modelItem => item.Prenom)
+                    </td>
+                    <td id="Statut1">
+                        @Html.DisplayFor(modelItem => item.Statut)
+                    </td>
+                </tr>
 
                     }
                 }
@@ -270,6 +276,8 @@
 
         <div class="form-outline mb-4"><label class="label-align-right">Prenom Patient :</label><input id="PrenomEmp" name="prenomemploye" readonly="readonly" type="text" class="text-align-left"></div>
 
+        <div class="div1-visible"><label class="label-align-right">Statut :</label><input name="Statutemploye" id="StatutEmp" type="text" class="text-align-left" /></div>
+
         <span>Bénéficiare?</span>
         <label for="chkYes">
             <input type="radio" id="chkYes" name="chkPassPort" onclick="javascript: return false;" />
@@ -283,7 +291,7 @@
         <div id="MatAD" class="div1-visible"><label class="label-align-right">Matricule Ayant Droit :</label><input name="matayantemploye" id="NumMatAD" type="text" class="text-align-left" /></div>
         <div id="NomAD" class="div1-visible"><label class="label-align-right">Nom Ayant Droit :</label><input name="nomayantemploye" id="NomEmpAD" type="text" class="text-align-left" /></div>
         <div id="PNomAD" class="div1-visible"><label class="label-align-right">Prenom Ayant Droit :</label><input name="prenomayantemploye" id="PrenomEmpAD" type="text" class="text-align-left" /></div>
-
+        <div class="div1-visible"><label class="label-align-right">Statut :</label><input name="statutayantemploye" id="StatutEmpAD" type="text" class="text-align-left" /></div>
 
         <div>
             <label class="label1-align-right">
